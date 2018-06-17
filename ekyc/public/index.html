@@ -1,0 +1,72 @@
+﻿    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" ng-app="kycApp">
+    <head>
+          <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cognizant e-KYC blockchain</title>
+        <!-- BOOTSTRAP STYLES-->
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+         <!-- FONTAWESOME STYLES-->
+        <link href="assets/css/font-awesome.css" rel="stylesheet" />
+            <!-- CUSTOM STYLES-->
+        <link href="assets/css/custom.css" rel="stylesheet" />
+         <!-- GOOGLE FONTS-->
+       <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+       <style type="text/css">
+            a {
+                cursor: pointer;
+            }
+       </style>
+
+       <!-- JQUERY SCRIPTS -->
+        <script src="assets/js/jquery-1.10.2.js"></script>
+          <!-- BOOTSTRAP SCRIPTS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- METISMENU SCRIPTS -->
+        <script src="assets/js/jquery.metisMenu.js"></script>
+          <!-- CUSTOM SCRIPTS -->
+        <!-- <script src="assets/js/custom.js"></script> -->
+
+        <!--encryption decryption scripts-->
+        <script language="JavaScript" type="text/javascript" src="assets/js/RSA_JS/jsbn.js"></script>
+        <script language="JavaScript" type="text/javascript" src="assets/js/RSA_JS/jsbn2.js"></script>
+        <script language="JavaScript" type="text/javascript" src="assets/js/RSA_JS/prng4.js"></script>
+        <script language="JavaScript" type="text/javascript" src="assets/js/RSA_JS/rng.js"></script>
+        <script language="JavaScript" type="text/javascript" src="assets/js/RSA_JS/rsa.js"></script>
+        <script language="JavaScript" type="text/javascript" src="assets/js/RSA_JS/rsa2.js"></script>
+
+        <!-- web3 js -->
+         <script src="assets/dist/web3.js"></script>
+         <script type="text/javascript">
+                if (typeof window.web3 !== "undefined" && typeof window.web3.currentProvider !== "undefined") {
+                    var web3 = new Web3(window.web3.currentProvider);
+                } else {
+                    var web3 = new Web3();
+                }
+        </script>
+        <script language="JavaScript" type="text/javascript" src="assets/js/contractDetails.js"></script>
+
+        <!-- IPFS file upload  -->
+        <script src="assets/js/buffer.js"></script>
+        <script src="https://unpkg.com/ipfs-api@9.0.0/dist/index.js" integrity="sha384-5bXRcW9kyxxnSMbOoHzraqa7Z0PQWIao+cgeg327zit1hz5LZCEbIMx/LWKPReuB" crossorigin="anonymous"></script>
+
+        <!-- angularjs -->
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        
+        <!-- angular controller and ngview config files -->
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/logincontroller.js"></script>
+        <script src="assets/js/dashboardcontroller.js"></script>
+        <script src="assets/js/requestkycontroller.js"></script>
+        <script src="assets/js/updateKycHistoryController.js"></script>
+        <script src="assets/js/logoutcontroller.js"></script>
+
+    </head>
+    <body>
+        <ng-view></ng-view>
+        
+       
+    </body>
+    </html>

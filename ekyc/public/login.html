@@ -1,0 +1,70 @@
+﻿
+        <div id="wrapper">
+           <div id="page-wrapper" style="background: #202020;margin: 0 0 0 0px;" >
+                
+                    <div class="row">
+                        <div class="col-md-12">
+                          <img src="assets/img/find_user.png" class="user-image img-responsive"/> 
+                          <div class="user-image img-responsive">
+                            <form ng-submit="login()">
+                                          <div class="form-group">
+                                            <label style="color:#ffffff;font-weight:100;">User Name</label>
+                                            <input id="username" type="text" name="username" ng-model="username" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label style="color:#ffffff;font-weight:100;">Password</label>
+                                            <input id="password" type="password" name="password" ng-model="password" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label style="color:#ffffff;font-weight:100;">Select Category</label>
+                                              <select id="category" name="category" ng-model="category" class="form-control">
+                                                    <option value="ORG">Organisation</option>
+                                                    <option value="CUST" selected>Customer</option>
+                                              </select>
+                                        </div>
+                                        <button type="submit" class="btn btn-info">Login</button>
+                                        <button type="button" class="btn btn-info" style="margin-left: 10px;" data-toggle="modal" data-target="#myModal">Register</button>
+
+                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button"  class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="myModalLabel">Registration</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                     <div class="form-group">
+                                                        <label style="font-weight:100;">User Name</label>
+                                                        <input id="orgusername" type="text" ng-model="orgusername" name="orgusername" class="form-control" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Select Category</label>
+                                                        <select id="orgcategory" ng-change="onSelectCategory()" name="orgcategory" ng-model="orgcategory" class="form-control">
+                                                            <option value="ORG">Organisation</option>
+                                                            <option value="CUST" selected>Customer</option>
+                                                        </select>
+                                                    </div>
+                                                    <div ng-show="isOrgasaction || isCustomer" class="form-group">
+                                                        <label ng-show="isOrgasaction" style="font-weight:100;">Orgasation Name</label>
+                                                        <label ng-show="isCustomer" style="font-weight:100;">Customer Name</label>
+                                                        <input id="orgname" type="text" ng-model="orgname" name="orgname" class="form-control" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                      <label style="font-weight:100;">Password</label>
+                                                      <input id="orgpassword" type="password" ng-model="orgpassword" name="orgpassword" class="form-control" />
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    <button type="button" ng-click="registration()" class="btn btn-primary">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                              </form>
+                          </div>
+                    </div>      
+            </div>  
+        </div>
+       
